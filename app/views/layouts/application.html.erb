@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Hunt</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <meta charset="UTF-8">
+
+  <!--<script src="http://use.typekit.net/koq1kyb.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>-->
+</head>
+<body>
+
+<header class="main-header">
+
+    <div class="top-header">
+
+      <div class="content-wrap group">
+        
+        <a href="#">
+        <div class="logo">
+          <h1>Product Hunt</h1>
+        </div>
+        </a>
+        <np class="add-new-post"><%= link_to '+', new_post_path %></np>
+        <a href="#" class="login">Log in</a>
+        <input type="search" class="search" placeholder="Search for a product...">
+        <i class="fa fa-search"></i>
+
+
+      </div>
+
+
+    </div>
+
+    <nav class="main-nav">
+
+      <div class="content-wrap">
+
+        <ul class="main-nav-links group">
+          <a href="#"><li class="active" id="tech">TECH</li></a>
+          <a href="#"><li id="games">GAMES<sup>&beta;</sup></li></a>
+          <a href="#"><li id="collections">COLLECTIONS</li></a>
+         <a href="#"> <li id="business">BUSINESS</li></a>
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main class="main-content">
+
+    <div class="content-wrap">
+
+      <section class="day">
+
+        <header class="day-header">
+          <h2>Today <span class="subtext">June 23rd</span></h2>
+        </header>
+
+
+
+<%= yield %>
+
+
+     </section>
+
+    </div>
+
+  </main>
+
+
+
+
+</body>
+</html>
+
+
+
+  
