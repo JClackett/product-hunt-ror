@@ -8,7 +8,8 @@
     </div>
   </a>
   <div class="post-content">
-      <h3 class="post-title"><%= post.title %></h3>
+
+      <h3 class="post-title"><%= link_to post.title, "http://#{post.url}" %></h3>
       <p class="post-description"><%= post.description %></p>
   </div>
   <div class="post-meta">
