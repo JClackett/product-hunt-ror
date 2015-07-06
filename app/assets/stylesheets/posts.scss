@@ -271,7 +271,7 @@ a  {
   cursor:pointer;
 }
 
-h4{
+h4 {
   color:#4C4C4C;
 }
 .bio:hover .box {
@@ -313,11 +313,30 @@ h4{
 
 
 
-// ----------------------------------------- Form 
+// ----------------------------------------- Form ----------------------------------------
 
-.field {
-  width:100px;
-  height: 100px;
+.field , .actions {
+  text-align: center;
+  border: solid 1px #ddd ;
+  margin:2.5%;
+  padding:6% 4%;
+  display: inline-block;
+  border-radius: 5px;
+  float: left;
+  width:20%;
+  height: 50px;
+  background-color: #eee;
+}
+
+.actions {
+  line-height: 50px;
+}
+
+
+.back_button {
+  position: absolute;
+  top:230px;
+  left:350px;
 }
 
 
