@@ -5,7 +5,6 @@ class CreatePosts < ActiveRecord::Migration
       t.text :description
       t.string :url
       t.integer :user_id
-      t.integer :vote
       t.string :category
 
       t.timestamps null: false

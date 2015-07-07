@@ -120,7 +120,7 @@ a  {
       text-decoration: none;
 }
 
-.add-new-post a {
+.add-new-post {
   color:#fff;
 }
 
@@ -223,7 +223,7 @@ a  {
       text-decoration: none;  
 }
 
-.post-content h3 a:hover {
+.post-content h3:hover {
       text-decoration: underline;
        color: #BBB;
 }
@@ -324,7 +324,6 @@ h4 {
   border: solid 1px #ddd ;
   margin:2.5%;
   padding:6% 4%;
-  display: inline-block;
   border-radius: 5px;
   float: left;
   width:20%;
@@ -340,7 +339,12 @@ h4 {
 .back_button {
   position: absolute;
   top:230px;
-  left:350px;
+  left:375px;
+}
+
+.back_button:hover{
+  text-decoration: underline;
+
 }
 
 

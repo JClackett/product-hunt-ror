@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20150706101909) do
     t.text     "description"
     t.string   "url"
     t.integer  "user_id"
-    t.integer  "vote"
     t.string   "category"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

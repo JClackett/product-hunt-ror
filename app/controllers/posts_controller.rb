@@ -2,9 +2,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :update, :destroy]
 
   # GET /posts
-  # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all.reverse
   end
 
 
@@ -18,11 +17,10 @@ class PostsController < ApplicationController
   end
 
   # POST /posts
-  # POST /posts.json
   def create
     @post = Post.new(post_params)
       if @post.save
-        redirect_to posts_path, notice: 'Post was successfully created'
+        redirect_to posts_path
       else
         render :new
       end
@@ -30,22 +28,18 @@ class PostsController < ApplicationController
 
 
   # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
   def update
-    respond_to do |format|
       if @post.update(post_params)
-        redirect_to posts_path, notice: 'Post was successfully updated'
+        redirect_to posts_path
       else
       render :edit
-    end
+      end
   end
 
   # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
     @post.destroy
-     redirect_to posts_path, notice: 'Post was successfully destroyed'
-    end
+     redirect_to posts_path
   end
 
   private
@@ -56,6 +50,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :description, :url, :vote, :category, :user_id)
+      params.require(:post).permit(:title, :description, :url, :category, :user_id)
     end
 end
