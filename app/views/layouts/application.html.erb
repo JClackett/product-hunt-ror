@@ -21,12 +21,10 @@
 
       <div class="content-wrap group">
         
-        <a href="http://localhost:3000/posts"> 
-        <div class="logo">
+        <%= link_to root_path , class: 'logo' do%>
           <h1>Product Hunt</h1>
-        </div>
-        </a>
-        <np class="add-new-post"><%= link_to '+', new_post_path %></np>
+        <% end %>
+        <%= link_to '+', new_post_path , class: 'add-new-post' %>
         <a href="#" class="login">Log in</a>
         <input type="search" class="search" placeholder="Search for a product...">
         <i class="fa fa-search"></i>
