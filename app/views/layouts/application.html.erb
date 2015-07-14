@@ -27,7 +27,16 @@
 
         <%= link_to '+', new_post_path , class: 'add-new-post' %>
 
-        <a href="#" class="login">Log in</a>
+        <% if user_signed_in? %>
+
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: 'login') %>        
+
+          <% else %>
+
+            <%= link_to('Login', new_user_session_path, class: 'login')  %>  
+          <% end %>
+
+        
         <input type="search" class="search" placeholder="Search for a product...">
         
       </div>
