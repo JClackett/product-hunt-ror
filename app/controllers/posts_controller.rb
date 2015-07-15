@@ -45,6 +45,16 @@ class PostsController < ApplicationController
      redirect_to posts_path
   end
 
+  def upvote
+    @post = Post.find(params[:id])
+    if current_user.voted_up_on? @post
+      @post.downvote_by current_user
+    else
+    @post.upvote_by current_user
+  end
+    redirect_to :back
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post

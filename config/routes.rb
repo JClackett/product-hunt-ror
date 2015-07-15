@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
 
 
-  devise_for :users
+devise_for :users
 
-    resources :posts do 
-      resources :comments, only: [:index , :create]
+ resources :posts, except: :show do
+    resources :comments, only: [:index, :create]
+    member do
+      put "like",  to: 'posts#upvote'
     end
+  end
 
+  
 
     root 'posts#index'
   # The priority is based upon order of creation: first created -> highest priority.
