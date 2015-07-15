@@ -14,15 +14,15 @@
       <p class="post-description"><%= post.description %></p>
   </div>
   <div class="post-meta">
-    <span class="post-comments">5</span>
+    <span class="post-comments"><%= post.comments.count %></span>
     <i class="fa fa-comment-o comment-icon"></i>
 
     <div class="bio">
-      <img src="http://www.monologuedb.com/wp-content/uploads/2011/08/Will-Forte-as-MacGruber.jpg" alt="post-creator" class="post-creator">
+      <img src=" http://fillmurray.com/35/35" alt="post-creator" class="post-creator">
       <div class="box">
-          <img src="http://www.monologuedb.com/wp-content/uploads/2011/08/Will-Forte-as-MacGruber.jpg" alt="post-creator" class="post-creator-bio">
+          <img src=" http://fillmurray.com/100/100" alt="post-creator" class="post-creator-bio">
           <h2><%= post.user.first_name %></h2>
-          <h4>Entrepreneur</h4>
+          <h4><%= post.user.job_title%></h4>
           <div class="follow"><a href="#" class="follow-creator">Follow</a></div>
       </div>
     </div>
