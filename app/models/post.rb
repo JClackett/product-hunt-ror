@@ -10,7 +10,7 @@
   # Validations
   # -------------------------------------------------------------------------------------------------------------------
   validates_format_of :url, with: URI::regexp(%w(http https))
-  validates_presence_of :title, :description, :category, :url
+  validates_presence_of :title, :description, :url, :user_id, :type
 
 
   # -------------------------------------------------------------------------------------------------------------------
@@ -19,6 +19,7 @@
   acts_as_votable
   belongs_to :user  
   has_many :comments
+
   
 
 

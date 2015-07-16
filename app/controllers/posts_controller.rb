@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   
-  before_action :set_post, only: [:edit, :update, :destroy]
+  before_action :set_post, only: [:edit, :update, :destroy, :upvote]
 
   # GET /posts
   def index
@@ -54,6 +54,7 @@ class PostsController < ApplicationController
   end
     redirect_to :back
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

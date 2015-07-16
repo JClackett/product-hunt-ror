@@ -10,6 +10,8 @@ devise_for :users
     end
   end
 
+
+
   
 
     root 'posts#index'
