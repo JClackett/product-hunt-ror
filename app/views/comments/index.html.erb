@@ -2,6 +2,8 @@
 
 <br>
 
+
+
 <div class="comments">
 
   <% @comments.each do |comment| %>
@@ -23,19 +25,18 @@
 
 </div>
 
-<br>
-
 <%= form_for([@post, @comment]) do |f| %>
 
-  <div class="field">
-    <%#= f.label :content %>
-    <%= f.text_area :content, rows: 2, placeholder: "Add your comment here" %>
+  <div class="input-comment">
+    <%= f.text_area :content, rows: 1, placeholder: "Add your comment here" %>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
 
-
+ 
 
 <% end %>
+
+

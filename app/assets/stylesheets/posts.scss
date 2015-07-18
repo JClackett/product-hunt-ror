@@ -268,7 +268,7 @@ a  {
 
 .box {
   position: absolute;
-  margin-right: -180px;
+  margin-right: -160px;
   font-size: 1.5rem;
   color:#1478ED;
   margin-top: 45px;
@@ -324,7 +324,7 @@ h4 {
       -webkit-transition:ease-in all 100ms;
       -webkit-border-radius: 50%;
       border-radius: 50%;
-      margin-top: 12px;
+      margin-top: 15px;
       border-color: white;
       width: 35px;
       height: 35px;
@@ -332,12 +332,18 @@ h4 {
 }
 
 .post-comments {
-      margin-left: 30px;
+      margin-left: 10px;
       line-height: 34px;
       float: right;
       margin-top: 12px;
       font-size: 1.6rem;
       color: #BBB;
+}
+
+.comment-icon {
+  float: right;
+  margin-top:20px;
+  margin-left: 20px;
 }
 
 

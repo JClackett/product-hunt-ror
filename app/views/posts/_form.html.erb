@@ -25,6 +25,10 @@
     <%= f.text_field :url %>
   </div>
 
+  <div class="field">
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :category %>
+  </div>
+
 
   <div class="actions">
     <%= f.submit %>
