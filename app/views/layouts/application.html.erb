@@ -44,20 +44,19 @@
       </div>
     </div>
 
+   
     <nav class="main-nav">
-
-      <div class="content-wrap">
-
+    <div class="content-wrap">
         <ul class="main-nav-links group">
-          <a href="#"><li class="active" id="tech">TECH</li></a>
-          <a href="#"><li id="games">GAMES<sup>&beta;</sup></li></a>
-          <a href="#"><li id="collections">COLLECTIONS</li></a>
-         <a href="#"> <li id="business">BUSINESS</li></a>
+            <% Category.all.each do |x| %>
+            <li><%= x.category %> </li>
+          <%end%>    
         </ul>
-
-      </div>
-
+      
+    </div>
     </nav>
+
+    
 
   </header>
 
@@ -73,7 +72,7 @@
 
 
 
-<%= yield %>
+      <%= yield %>
 
 
      </section>

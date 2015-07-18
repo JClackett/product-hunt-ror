@@ -193,6 +193,7 @@ a  {
       height:60px;
       width:100%;
       cursor: pointer;
+      position: relative;
       -webkit-transition:ease-in all 200ms;
 }
 .post:hover {
@@ -257,6 +258,19 @@ a  {
       color: #999;
       margin: 10px 0 0 0;
 }
+
+.categories {
+  position: absolute;
+  top:0px;
+  left: 200px;
+  color:#1478ED;
+}
+
+.categories nav ul li {
+    list-style: none;
+}
+
+
 .post-meta {
       width: 100px;
       float: right;

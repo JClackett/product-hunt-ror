@@ -15,9 +15,16 @@
       <p class="post-description"><%= post.description %></p>
   </div>
 
-  <div class="categories"> 
-    <h6> <%= post.category_ids %></h6>
+  <div >
+  <nav class="categories">
+      <ul>
+        <% post.categories.each do |categories| %>
+          <li><%= categories.category %> </li>
+        <%end%>     
+    </ul>
+    </nav>
   </div>
+  
 
   <div class="post-meta">
       <span class="post-comments"><%= post.comments.count %></span>
