@@ -25,40 +25,26 @@ class CategoriesController < ApplicationController
   # POST /categories.json
   def create
     @category = Category.new(category_params)
-
-    respond_to do |format|
       if @category.save
-        format.html { redirect_to @category, notice: 'Category was successfully created.' }
-        format.json { render :show, status: :created, location: @category }
+        redirect_to posts_path
       else
-        format.html { render :new }
-        format.json { render json: @category.errors, status: :unprocessable_entity }
+        render :new
       end
-    end
-  end
+    end 
 
-  # PATCH/PUT /categories/1
-  # PATCH/PUT /categories/1.json
+  # PATCH/PUT /posts
   def update
-    respond_to do |format|
       if @category.update(category_params)
-        format.html { redirect_to @category, notice: 'Category was successfully updated.' }
-        format.json { render :show, status: :ok, location: @category }
+        redirect_to posts_path
       else
-        format.html { render :edit }
-        format.json { render json: @category.errors, status: :unprocessable_entity }
+      render :edit
       end
-    end
   end
 
-  # DELETE /categories/1
-  # DELETE /categories/1.json
+  # DELETE /posts
   def destroy
     @category.destroy
-    respond_to do |format|
-      format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+     redirect_to posts_path
   end
 
   private

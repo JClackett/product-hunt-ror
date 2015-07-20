@@ -51,6 +51,8 @@
             <% Category.all.each do |x| %>
             <li><%= x.category %> </li>
           <%end%>    
+          <li><%= link_to '+', new_category_path %></li>
+          <li><%= link_to '-', category_path(1) %></li>
         </ul>
       
     </div>
